@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Jana, from Azoz</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+        background: #07152f;
+        color: white;
+        overflow-x: hidden;
+    }
+
+    section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 80px 25px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .content {
+        width: 100%;
+        max-width: 720px;
+        margin: auto;
+        position: relative;
+        z-index: 2;
+    }
+
+    .small-text {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        color: #6fa3ff;
+        margin-bottom: 25px;
+        font-weight: 700;
+    }
+
+    h1 {
+        font-size: clamp(50px, 10vw, 100px);
+        line-height: 0.95;
+        letter-spacing: -4px;
+        margin: 0;
+        font-weight: 800;
+    }
+
+    h2 {
+        font-size: clamp(40px, 8vw, 70px);
+        line-height: 1;
+        letter-spacing: -3px;
+        margin: 0;
+        font-weight: 800;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #aebbd0;
+        margin: 30px auto;
+        max-width: 550px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 16px 26px;
+        background: #1769ff;
+        color: white;
+        text-decoration: none;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 15px;
+        margin-top: 10px;
+        box-shadow: 0 10px 30px rgba(23, 105, 255, 0.25);
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease,
+            background 0.25s ease;
+    }
+
+    .button:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 15px 35px rgba(23, 105, 255, 0.35);
+        background: #3185ff;
+    }
+
+    section::before {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: rgba(23, 105, 255, 0.08);
+        filter: blur(80px);
+        top: -200px;
+        right: -200px;
+    }
+
+    section::after {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background: rgba(23, 105, 255, 0.06);
+        filter: blur(80px);
+        bottom: -200px;
+        left: -200px;
+    }
+
+    @media (max-width: 600px) {
+
+        section {
+            padding: 70px 22px;
+        }
+
+        h1 {
+            font-size: 52px;
+            letter-spacing: -3px;
+        }
+
+        h2 {
+            font-size: 40px;
+            letter-spacing: -2px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .button {
+            padding: 15px 22px;
+            font-size: 14px;
+        }
+    }
+   /* TOP NAVIGATION */
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 12px 20px 9px;
+    background: rgba(7, 21, 47, 0.88);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.nav-content {
+    max-width: 720px;
+    margin: auto;
+}
+
+.nav-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 7.14%;
+    height: 100%;
+    background: #1769ff;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+.top-nav::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -30px;
+    height: 30px;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(7, 21, 47, 0.18),
+        transparent
+    );
+}
+
+@media (max-width: 600px) {
+
+    .top-nav {
+        padding: 12px 14px 9px;
+    }
+
+    .nav-info {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+}
+</style>
+
+</head>
+
+<body>
+    <header class="top-nav">
+
+        <div class="nav-content">
+
+            <div class="nav-info">
+                <span>For Jana, from Azoz</span>
+                <span>01 / 14</span>
+            </div>
+
+            <div class="progress-track">
+                <div class="progress-bar"></div>
+            </div>
+
+        </div>
+
+    </header>
+
+    <section id="intro">
+
+        <div class="content">
+
+            <div class="small-text">
+                Before you ask...
+            </div>
+
+            <h1>
+                Why is there
+                a whole website?
+            </h1>
+
+            <p>
+                Because I wanted to tell you something, but I didn't want to
+                send you a normal message and make it feel like every other message.
+            </p>
+
+            <p>
+                I know a little about you.
+                Some random things, some things we have in common, and a few things
+                that made me think, "okay, I actually want to know this person better."
+            </p>
+
+            <h2 style="font-size: 42px; margin-top: 45px;">
+                So I made this.
+            </h2>
+
+            <p>
+                Not a confession. Not a dramatic declaration.
+                Just my slightly ridiculous way of asking if you'd be open
+                to becoming friends.
+            </p>
+
+            <a href="#next" class="button">
+                Okay, explain yourself
+            </a>
+
+        </div>
+
+    </section>
+
+    <section id="next" style="background: white; color: #07152f;">
+
+    <div class="content">
+
+        <div class="small-text">
+            Reason #01
+        </div>
+
+        <h2>
+            You're a UI/UX Designer
+            & Front-end Developer.
+        </h2>
+
+        <p style="color: #66728a;">
+            So now you can officially count on me
+            for some of your tasks.
+        </p>
+
+        <p style="color: #66728a;">
+    You know...
+    since I apparently decided to become
+    a website designer for you.
+</p>
+
+<p style="
+    font-size: 14px;
+    font-weight: bold;
+    color: #1769ff;
+    margin-top: 25px;
+">
+    Consider this my first unpaid internship.
+</p>
+
+<a href="#blue" class="button">
+    Fair enough, continue
+</a>
+
+    </div>
+
+</section><section id="blue" style="background: #1769ff; color: white;">
+
+    <div class="content">
+
+        <div class="small-text" style="color: #dce9ff;">
+            Reason #02
+        </div>
+
+        <h2>
+            You love blue.
+        </h2>
+
+        <p style="color: #e0ebff;">
+            Me too.
+        </p>
+
+        <p style="color: #e0ebff;">
+            So obviously, there was only one acceptable
+            choice for the dominant color of this website.
+        </p>
+
+        <h2 style="font-size: 50px; margin-top: 35px;">
+            Blue.
+        </h2>
+
+        <p style="color: #e0ebff;">
+            I mean, what else was I supposed to do?
+        </p>
+
+        <a href="#investigation" class="button"
+           style="background: white; color: #1769ff;">
+            Okay, I get it
+        </a>
+
+    </div>
+
+</section><section id="investigation" style="background: #f3f7ff; color: #07152f;">
+
+    <div class="content">
+
+        <div class="small-text">
+            The investigation
+        </div>
+
+        <h2>
+            I don't actually know
+            that much about you.
+        </h2>
+
+        <p style="color: #66728a;">
+            At least, not yet.
+        </p>
+
+        <p style="color: #66728a;">
+            But somehow I've collected a suspicious
+            amount of little information about you.
+        </p>
+
+        <a href="#sea" class="button">
+            Show me the evidence
+        </a>
+
+    </div>
+
+</section>
+<section id="sea" style="background: #1769ff; color: white;">
+
+    <div class="content">
+
+        <div class="small-text" style="color: #dce9ff;">
+            Reason #03
+        </div>
+
+        <h2>
+            You love the sea.
+        </h2>
+
+        <p style="color: #e0ebff;">
+            So do I.
+        </p>
+
+        <h2 style="font-size: 45px; margin-top: 35px;">
+            That's already one thing
+            we have in common.
+        </h2>
+
+        <p style="color: #e0ebff;">
+            And apparently, I decided one similarity
+            was enough evidence to continue this investigation.
+        </p>
+
+        <a href="#dolphins"
+           class="button"
+           style="background: white; color: #1769ff;">
+            Next coincidence
+        </a>
+
+    </div>
+
+</section>
+<section id="dolphins" style="background: #07152f; color: white;">
+
+    <div class="content">
+
+        <div class="small-text">
+            Reason #04
+        </div>
+
+        <h2>
+            Your favorite animal
+            is dolphins.
+        </h2>
+
+        <div style="font-size: 80px; margin: 30px 0;">
+            🐬
+        </div>
+
+        <p>
+            Mine too.
+        </p>
+
+        <h2 style="font-size: 42px; margin-top: 35px;">
+            At this point, I'm starting
+            to think the universe is
+            doing something.
+        </h2>
+
+        <p>
+            Not romantically.
+            Calm down.
+            We're trying to become friends here.
+        </p>
+
+        <a href="#australia" class="button">
+            Continue
+        </a>
+
+    </div>
+
+</section>
+<section id="australia" style="background: white; color: #07152f;">
+
+    <div class="content">
+
+        <div class="small-text">
+            Reason #05
+        </div>
+
+        <h2>
+            You want to travel
+            to Australia.
+        </h2>
+
+        <div style="font-size: 80px; margin: 30px 0;">
+            🇦🇺
+        </div>
+
+        <p style="color: #66728a;">
+            I want to go too.
+        </p>
+
+        <h2 style="font-size: 42px; margin-top: 35px;">
+            So technically,
+            we already have a trip planned.
+        </h2>
+
+        <p style="color: #66728a;">
+            You just don't know about it yet.
+        </p>
+
+        <p style="color: #66728a;">
+            Australia?
+            You, me, and absolutely no idea
+            what we're doing.
+        </p>
+
+        <a href="#yly" class="button">
+            Sounds like a terrible idea
+        </a>
+
+    </div>
+
+</section>
+<section id="yly" style="background: #1769ff; color: white;">
+
+    <div class="content">
+
+        <div class="small-text" style="color: #dce9ff;">
+            Reason #06
+        </div>
+
+        <h2>
+            You were a member
+            of YLY.
+        </h2>
+
+        <p style="color: #e0ebff;">
+            Which means you probably understand
+            what I'm about to say.
+        </p>
+
+        <h2 style="font-size: 55px; margin-top: 45px;">
+            UNION.
+        </h2>
+
+        <h2 style="font-size: 55px;">
+            NOT ENTITY.
+        </h2>
+
+        <p style="color: #e0ebff; margin-top: 35px;">
+            If you understood that immediately,
+            you just earned +10 friendship points.
+        </p>
+
+        <a href="#zodiac"
+           class="button"
+           style="background: white; color: #1769ff;">
+            I understood the reference
+        </a>
+
+    </div>
+
+</section>
+<section id="zodiac" style="background: #07152f; color: white;">
+
+    <div class="content">
+
+        <div class="small-text">
+            Reason #07
+        </div>
+
+        <h2>
+            You're a Sagittarius.
+        </h2>
+
+        <p>
+            And I'm a Leo.
+        </p>
+
+        <div style="
+            font-size: 70px;
+            margin: 35px 0;
+        ">
+            ♐︎ + ♌︎
+        </div>
+
+        <h2 style="font-size: 65px;">
+            90%
+        </h2>
+
+        <p>
+            Apparently, that's our compatibility.
+        </p>
+
+        <p>
+            I have absolutely no idea
+            how accurate that is.
+        </p>
+
+        <h2 style="
+            font-size: 40px;
+            margin-top: 40px;
+        ">
+            I just hope we're not the 10%.
+        </h2>
+
+        <a href="#f1" class="button">
+            Let's continue
+        </a>
+
+    </div>
+
+</section>
+<section id="f1" style="background: white; color: #07152f;">
+
+    <div class="content">
+
+        <div class="small-text">
+            Reason #08
+        </div>
+
+        <h2>
+            You love F1.
+        </h2>
+
+        <div style="
+            font-size: 80px;
+            margin: 35px 0;
+        ">
+            🏎️
+        </div>
+
+        <p style="color: #66728a;">
+            Which gives me the perfect opportunity
+            to tell you something very important.
+        </p>
+
+        <h2 style="
+            font-size: 42px;
+            margin-top: 35px;
+        ">
+            I think I'm Lewis Hamilton
+            in another universe.
+        </h2>
+
+        <p style="color: #66728a;">
+            Unfortunately, this universe gave me
+            zero F1 championships.
+        </p>
+
+        <p style="color: #66728a;">
+            But I'm still waiting for Mercedes to call.
+        </p>
+
+        <a href="#fashion" class="button">
+            Continue
+        </a>
+
+    </div>
+
+</section>
+<section id="fashion" style="background: #1769ff; color: white;">
+
+    <div class="content">
+
+        <div class="small-text" style="color: #dce9ff;">
+            Reason #09
+        </div>
+
+        <h2>
+            You want to be
+            a fashion designer.
+        </h2>
+
+        <p style="color: #e0ebff;">
+            Which means I have a business proposal.
+        </p>
+
+        <h2 style="
+            font-size: 48px;
+            margin-top: 40px;
+        ">
+            Forget Prada.
+        </h2>
+
+        <h2 style="
+            font-size: 48px;
+            margin-top: 15px;
+        ">
+            We'll build a new one.
+        </h2>
+
+        <p style="color: #e0ebff;">
+            You handle the fashion.
+            I'll handle the website.
+        </p>
+
+        <div style="
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin: 35px 0;
+        ">
+            JANA × AZOZ
+        </div>
+
+        <p style="color: #dce9ff;">
+            A completely unnecessary fashion empire.
+        </p>
+
+        <a href="#basketball"
+           class="button"
+           style="background: white; color: #1769ff;">
+            Next business idea
+        </a>
+
+    </div>
+
+</section>
+<section id="basketball" style="background: white; color: #07152f;">
+
+    <div class="content">
+
+        <div class="small-text">
+            Reason #10
+        </div>
+
+        <h2>
+            You used to play basketball.
+        </h2>
+
+        <div style="
+            font-size: 80px;
+            margin: 35px 0;
+        ">
+            🏀
+        </div>
+
+        <p style="color: #66728a;">
+            I'm 188 cm.
+        </p>
+
+        <h2 style="
+            font-size: 48px;
+            margin-top: 30px;
+        ">
+            I can be the basket.
+        </h2>
+
+        <p style="color: #66728a;">
+            I don't know if that's how basketball works.
+        </p>
+
+        <p style="color: #66728a;">
+            But I'm committed to the role.
+        </p>
+
+        <a href="#honest"
+           class="button">
+            Okay, enough nonsense
+        </a>
+
+    </div>
+
+</section>
+<section id="honest" style="background: #07152f; color: white;">
+
+    <div class="content">
+
+        <div class="small-text">
+            The actual reason
+        </div>
+
+        <h2>
+            But honestly...
+        </h2>
+
+        <p>
+            I didn't make this because
+            we have the same favorite animal.
+        </p>
+
+        <p>
+            Or because we both love the sea.
+        </p>
+
+        <p>
+            Or because you're a Sagittarius
+            and I'm a Leo.
+        </p>
+
+        <p>
+            Or because apparently
+            we're going to Australia now.
+        </p>
+
+        <h2 style="
+            font-size: 42px;
+            margin-top: 45px;
+        ">
+            I made it because
+            I think you're an interesting person.
+        </h2>
+
+        <p>
+            And from the little things I've learned
+            about you, I feel like we'd actually
+            get along.
+        </p>
+
+        <a href="#question" class="button">
+            One last thing
+        </a>
+
+    </div>
+
+</section>
+<section id="question" style="background: white; color: #07152f;">
+
+    <div class="content">
+
+        <div class="small-text">
+            The question
+        </div>
+
+        <p style="color: #66728a;">
+            I know a little about you.
+        </p>
+
+        <p style="color: #66728a;">
+            Maybe not enough.
+        </p>
+
+        <p style="color: #66728a;">
+            But enough to make me curious
+            about the person behind all
+            these little things.
+        </p>
+
+        <h2 style="
+            font-size: 42px;
+            margin-top: 45px;
+        ">
+            And maybe you got
+            a little curious about me too.
+        </h2>
+
+        <h2 style="
+            font-size: 42px;
+            margin-top: 55px;
+        ">
+            If you want to know me better,
+            <span style="color: #1769ff;">
+                be my friend.
+            </span>
+        </h2>
+
+        <p style="
+            font-size: 24px;
+            font-weight: bold;
+            color: #07152f;
+        ">
+            Deal?
+        </p>
+
+        <a href="#yes"
+           class="button">
+            I'm in
+        </a>
+
+        <a href="#think"
+           class="button"
+           style="
+                background: white;
+                color: #07152f;
+                border: 2px solid #07152f;
+           ">
+            Let me think
+        </a>
+
+    </div>
+
+</section>
+<section id="yes" style="background: #1769ff; color: white;">
+
+    <div class="content">
+
+        <div class="small-text" style="color: #dce9ff;">
+            Friendship application
+        </div>
+
+        <h2>
+            Okay.
+        </h2>
+
+        <h2 style="
+            font-size: 50px;
+            margin-top: 25px;
+        ">
+            Hi, friend.
+        </h2>
+
+        <p style="color: #e0ebff;">
+            Now let's actually get to know each other.
+        </p>
+
+        <p style="color: #dce9ff;">
+            Chapter 01: We haven't even started yet.
+        </p>
+
+    </div>
+
+</section>
+<section id="think" style="background: #07152f; color: white;">
+
+    <div class="content">
+
+        <div class="small-text">
+            HR department
+        </div>
+
+        <h2>
+            Interesting.
+        </h2>
+
+        <p>
+            Your answer has been forwarded
+            to HR for further investigation.
+        </p>
+
+        <a href="#yes" class="button">
+            Okay, let me reconsider
+        </a>
+
+    </div>
+
+</section>
+
+<script>
+
+    const sections = [
+        "intro",
+        "next",
+        "blue",
+        "investigation",
+        "sea",
+        "dolphins",
+        "australia",
+        "yly",
+        "zodiac",
+        "f1",
+        "fashion",
+        "basketball",
+        "honest",
+        "question"
+    ];
+
+    const progressBar = document.querySelector(".progress-bar");
+    const sectionCounter = document.querySelector(".nav-info span:last-child");
+
+    function updateProgress() {
+
+        let currentSection = 0;
+
+        const screenMiddle = window.innerHeight / 2;
+
+        sections.forEach((id, index) => {
+
+            const section = document.getElementById(id);
+
+            if (!section) return;
+
+            const rect = section.getBoundingClientRect();
+
+            if (rect.top <= screenMiddle) {
+                currentSection = index;
+            }
+
+        });
+
+        const progress =
+            ((currentSection + 1) / sections.length) * 100;
+
+        progressBar.style.width = progress + "%";
+
+        sectionCounter.textContent =
+            String(currentSection + 1).padStart(2, "0")
+            + " / "
+            + String(sections.length).padStart(2, "0");
+
+    }
+
+    window.addEventListener("scroll", updateProgress);
+
+    window.addEventListener("resize", updateProgress);
+
+    updateProgress();
+
+</script>
+</body>
+</html>
